@@ -6,9 +6,6 @@ import java.awt.event.ActionListener;
  * The Graphical User Interface Using Java Swing
  */
 public class GUI extends JFrame {
-    /**
-     * Create an input text field and buttons
-     */
     private JTextField input;
     private JButton btnDetermineIfPrime;
     private JButton btnGetFactorial;
@@ -58,7 +55,7 @@ public class GUI extends JFrame {
         panelBtns.add(btnGetFactorial);
 
         // Create label for result
-        result = new JLabel("Result");
+        result = new JLabel("");
         result.setForeground(Color.WHITE);
 
         // Create GridBagConstraints
@@ -77,6 +74,10 @@ public class GUI extends JFrame {
         this.add(panel, BorderLayout.CENTER);
     }
 
+    /**
+     * This function sets an action listener for the buttons
+     * @param listener
+     */
     public void setActionListener(ActionListener listener) {
         // add an event listener to button 1
         btnDetermineIfPrime.addActionListener(listener);
